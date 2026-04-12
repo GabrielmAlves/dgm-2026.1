@@ -76,7 +76,7 @@ The output of the generative model in this project will consist of images genera
 In the initial state (pre-trained model), the system is expected to generate images influenced by learned statistical patterns, often failing to correctly apply uncommon attributes specified in the prompt.
 
 After applying fine-tuning with a synthetic dataset composed of objects with non-standard attribute combinations (e.g., unusual colors), the expected state-of-the-art outcome is that the model becomes capable of correctly modifying object attributes according to the prompt specification.
-(After applying fine-tuning to the data, including combinations of non-standard attributes, such as unusual colors, the expected outcome is that the model be able of correctly modifying object attributes according to the prompt's requests.)
+(After applying fine-tuning to a synthetic dataset, including combinations of non-standard attributes, such as unusual colors, the expected outcome is that the model be able of correctly modifying object attributes according to the prompt's requests.)
 
 In particular, the improved model should be able to:
 
