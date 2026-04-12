@@ -115,11 +115,6 @@ abs/2006.11239. url: https://arxiv.org/abs/2006.11239 (ver p. 20).
 - Nichol, A. et al. (2021). “GLIDE: Towards Photorealistic Image Generation and Editing
 with Text-Guided Diffusion Models”. Em: CoRR abs/2112.10741. url: https://arxiv.org/abs/2112.10741 (ver p. 20).
 
-
-- https://arxiv.org/pdf/2112.10752 - Treinamento do difusion 
-- https://arxiv.org/pdf/2006.11239 - Denoising Diffusion Probabilistic Models
-- https://arxiv.org/pdf/2112.10741 - GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models
-
 ## Tools to be used (based on the group’s current vision of the project).
 - Python
 - PyTorch
