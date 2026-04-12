@@ -12,7 +12,7 @@ This project originated in the context of the graduate course _IA376N - Generati
 > |Name | RA | Specialization|
 > |--|--|--|
 > | Patrícia P. Giordano | 971352 | Electrical Engineering|
-> | Gabriel Carvalho Freitas | 323616 | Electrical Engineering|
+> | Gabriel Morais Alves | 323616 | Computer Engineering|
 > | Silvia A. P. Olivio | 224932 | Electrical Engineering|
 
 ## Project Summary Description
