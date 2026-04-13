@@ -119,7 +119,7 @@ CLIP Score: measuring the semantic alignment between generated images and input 
 
 ## Schedule
 
-The following schedule is proposed for each stage of the project.
+The following schedule is proposed for each stage of the project:
 
 ![Schedule - IA Generative Project](https://github.com/user-attachments/assets/90eafcc8-3f88-4fc1-b792-126e120d7ae2)
 
