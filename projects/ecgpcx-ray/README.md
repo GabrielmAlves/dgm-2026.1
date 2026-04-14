@@ -127,7 +127,34 @@ It enforces **cycle consistency**, preserving anatomical structure while modifyi
 
 ---
 
-### 3. Explainability Strategy
+### 3. Classification Models
+
+A classification model is a central component of this project, as it provides the basis for evaluating both data augmentation and explainability through counterfactuals.
+
+The classifier is trained to perform a binary classification task:
+
+- Input: Chest X-ray image
+- Output: Pneumonia vs. Healthy
+
+This model serves two main purposes:
+
+- Performance Benchmark
+
+  - Evaluate whether synthetic data improves classification performance
+
+- Explainability Anchor
+  - Counterfactual explanations are defined with respect to this model
+  - A valid counterfactual should change the classifier’s prediction
+Model Architecture
+
+We will adopt a convolutional neural network (CNN)-based architecture. Depending on feasibility, we consider:
+
+- A simple custom CNN (baseline)
+- A pretrained model such as ResNet-18 or ResNet-34 (fine-tuned)
+
+---
+
+### 4. Explainability Strategy
 
 A central contribution of this project is the use of **counterfactual explanations**.
 
@@ -155,7 +182,7 @@ Additionally:
 
 ---
 
-### 4. Tools
+### 5. Tools
 
 | Tool | Purpose |
 |---|---|
@@ -169,27 +196,26 @@ Additionally:
 
 ---
 
-### 5. Evaluation
+### 6. Evaluation
 
 The evaluation will consider three aspects:
 
-#### 5.1 Classification Performance:
+#### 6.1 Classification Performance:
 - Accuracy  
 - ROC-AUC  
 
-#### 5.2 Image Quality:
+#### 6.2 Image Generation Quality:
 - SSIM (Structural Similarity Index)  
-- FID (Fréchet Inception Distance) *(tbd)*  
+- LPIPS (Perceptual Similarity)
 
-#### 5.3 Explainability:
+#### 6.3 Explainability:
 - Visual inspection of counterfactual differences  
 - Comparison with Grad-CAM heatmaps  
-- Consistency across similar samples  
-- Classifier (predict with pneumonia vs. without)
+- Classifier Consistency (predict with pneumonia vs. without)
 
 ---
 
-### 6. Expected Results
+### 7. Expected Results
 
 The project expects to produce:
 
