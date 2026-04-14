@@ -105,9 +105,6 @@ We expect to verify that the fine-tuning techniques were indeed helpful into adj
 - Human evaluation - realism and subtle failures
 - Compositional benchmarks - success rate of correct binding
 
-## Proposal for evaluating the synthesis results.
-CLIP Score: measuring the semantic alignment between generated images and input prompts
-
 ## Schedule
 
 The following schedule is proposed for each stage of the project:
