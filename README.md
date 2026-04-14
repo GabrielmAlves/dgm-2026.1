@@ -1,6 +1,6 @@
-# `Geração de Imagens com IA: Diversidade, Imparcialidade e Confiabilidade dos Modelos Generativos`
+# `Geração de Imagens com IA: Desafios no Controle de Atributos sob Viés de Dados`
 
-# `AI Image Generation: Diversity, Fairness, and Reliability of Generative Models`
+# `AI Image Generation: Challenges in Attribute Control under Data Bias`
 
 ## Presentation
 
