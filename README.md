@@ -75,16 +75,13 @@ In particular, the improved model should be able to:
 - Cuidado: Reduce bias toward dominant patterns learned during pre-training
 - Generate images that are more consistent with the input prompt
 
-> # Include in this section a link to the presentation video of the project proposal (maximum 5 minutes).
-
 ## Proposed Methodology
-
-> For the first submission, the proposed methodology must clarify:
 
 # Dataset
 Generate a synthetic dataset with non-standardized object attributes, e.g., colored blackboards, and use LoRA fine-tuning to improve attribute control in a pre-trained text-to-image model.
 
 ## Which dataset(s) the project intends to use, justifying the choice(s).
+A synthetic dataset synthesized by the group containing non-standardized object attributes, e.g., colored blackboards. Our choice for this type of data was due to the context of the problem, in which is very specific for some type of attributes, which makes it difficult for us to encounter existent datasets containing exactly the type of attribute we need.
 
 ## Which generative modeling approaches the group already sees as interesting to be studied.
 The following methods are considered within the scope of this project:
