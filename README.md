@@ -45,12 +45,11 @@ Specifically, the study aims to investigate whether, after fine-tuning with data
 The main hypothesis of this project is that the inability of text-to-image models to correctly apply specific attributes is primarily influenced by the statistical prioritization of patterns, which leads the model to favor dominant representations over explicit user instructions, such as a classroom blackboard traditionally associated with green or black colors.
 
 # Secondary Questions 
-- 1 To support the main hypothesis, the project investigates the following secondary questions:
-- 2 To what extent do training data biases influence the model’s output when attributes conflict with common representations?
-- 3 Can fine-tuning with controlled data improve the model’s ability to correctly apply attributes?
-- 4 Does the model architecture itself limit the ability to disentangle attributes from objects?
-- 5 Are alternative architectures (e.g., Beta-VAE) more effective in handling attribute control?
-- 2 (To what extent do training data influence the model's response to a user's request when the requested attributes are unconventional?)
+- To support the main hypothesis, the project investigates the following secondary questions:
+- To what extent do training data biases influence the model’s output when attributes conflict with common representations?
+- Can fine-tuning with controlled data improve the model’s ability to correctly apply attributes?
+- Does the model architecture itself limit the ability to disentangle attributes from objects?
+- Are alternative architectures (e.g., Beta-VAE) more effective in handling attribute control?
 
 # Expected Output of the Generative Model.
 The output of the generative model in this project will consist of images generated from controlled textual prompts, with a specific focus on attribute manipulation, especially color.
