@@ -23,7 +23,7 @@ The main goal of this project is to investigate and implement a deep generative 
 
 The output of the generative model will be a 3D Point Cloud representing the geometric structure of the pothole. The model will take a single 2D image as the condition/input and probabilistically generate the spatial coordinates (X, Y, Z) of the points that form the asphalt's concavity.
 
-Presentation Link: []()
+Presentation Link [here](https://docs.google.com/presentation/d/1CM4DDgOnC9EBGzu9f0BrfLRTlg05Kgunh3uYEckwZDQ/edit?usp=sharing)
 
 ## Proposed Methodology
 
@@ -69,28 +69,20 @@ BASTICO, Matteo, et al. Rethinking Metrics and Diffusion Architecture for 3D Poi
 
 FAN, Rui, et al. Rethinking road surface 3-D reconstruction and pothole detection: From perspective transformation to disparity map segmentation. IEEE Transactions on Cybernetics, 2021, vol. 52, no 7, p. 5799-5808. Available at: https://arxiv.org/abs/2012.10802
 
-HUANG, Zixuan, et al. Spar3d: Stable point-aware reconstruction of 3d objects from single images. En Proceedings of the Computer Vision and Pattern Recognition Conference. 2025. p. 16860-16870. Available at: https://arxiv.org/abs/2501.04689
+GEIGER, Andreas; LENZ, Philip; URTASUN, Raquel. Are we ready for autonomous driving? the kitti vision benchmark suite. In: 2012 IEEE conference on computer vision and pattern recognition. IEEE, 2012. p. 3354-3361. Available at https://ieeexplore.ieee.org/abstract/document/6248074
 
 HIGO, Kazuki, et al. TerraFusion: Joint Generation of Terrain Geometry and Texture Using Latent Diffusion Models. arXiv preprint arXiv:2505.04050, 2025. Available at: https://arxiv.org/abs/2505.04050
 
-WANG, Zhengren. 3d representation methods: A survey. arXiv preprint arXiv:2410.06475, 2024. Available at: https://arxiv.org/abs/2410.06475
+HUANG, Zixuan, et al. Spar3d: Stable point-aware reconstruction of 3d objects from single images. En Proceedings of the Computer Vision and Pattern Recognition Conference. 2025. p. 16860-16870. Available at: https://arxiv.org/abs/2501.04689
+
+LI, Zhengqi; SNAVELY, Noah. Megadepth: Learning single-view depth prediction from internet photos. In: Proceedings of the IEEE conference on computer vision and pattern recognition. 2018. p. 2041-2050. Available at https://arxiv.org/abs/1804.00607
+
+RANFTL, René et al. Towards robust monocular depth estimation: Mixing datasets for zero-shot cross-dataset transfer. IEEE transactions on pattern analysis and machine intelligence, v. 44, n. 3, p. 1623-1637, 2020. Available at https://arxiv.org/abs/1907.01341
+
+RANFTL, René; BOCHKOVSKIY, Alexey; KOLTUN, Vladlen. Vision transformers for dense prediction. In: Proceedings of the IEEE/CVF international conference on computer vision. 2021. p. 12179-12188. Available at https://arxiv.org/abs/2103.13413
 
 TANG, Xiang; LI, Ruotong; FAN, Xiaopeng. Recent Advances in 3D Object and Scene Generation: A Survey. arXiv preprint arXiv:2504.11734, 2025. Available at: https://arxiv.org/abs/2504.11734
 
-R. Fan, X. Ai, N. Dahnoun, and D. Worrall, “Rethinking Road Surface 3D Reconstruction and Pothole Detection,” arXiv:2012.10802, 2020.
+WANG, Zhengren. 3d representation methods: A survey. arXiv preprint arXiv:2410.06475, 2024. Available at: https://arxiv.org/abs/2410.06475
 
-X. Huang et al., “SPAR3D: Stable Point-Aware Reconstruction of 3D Objects from Single Images,” Proc. IEEE/CVF CVPR, 2025.
-
-R. Ranftl et al., “Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-Shot Cross-Dataset Transfer,” IEEE TPAMI, 2022.
-
-R. Ranftl, A. Bochkovskiy, and V. Koltun, “Vision Transformers for Dense Prediction,” Proc. IEEE/CVF ICCV, 2021.
-
-Z. Li and N. Snavely, “MegaDepth: Learning Single-View Depth Prediction from Internet Photos,” Proc. IEEE/CVF CVPR, 2018.
-
-A. Geiger, P. Lenz, and R. Urtasun, “Are We Ready for Autonomous Driving? The KITTI Vision Benchmark Suite,” Proc. IEEE/CVF CVPR, 2012.
-
-M. Yurdakul and Ş. Taşdemir, “An Enhanced YOLOv8 Model for Real-Time and Accurate Pothole Detection and Measurement,” arXiv:2505.04207, 2025.
-
-Q.-Y. Zhou, J. Park, and V. Koltun, “Open3D: A Modern Library for 3D Data Processing,” 2018.
-
-A. Paszke et al., “PyTorch: An Imperative Style, High-Performance Deep Learning Library,” NeurIPS, 2019.
+YURDAKUL, Mustafa; TASDEMIR, Şakir. An enhanced yolov8 model for real-time and accurate pothole detection and measurement. arXiv preprint arXiv:2505.04207, 2025. Available at https://arxiv.org/abs/2505.04207
