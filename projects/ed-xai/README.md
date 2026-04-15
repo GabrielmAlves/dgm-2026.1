@@ -30,7 +30,7 @@ The proposed methodology relies on a selection of standard synthetic image datas
 
 To overcome the blind spots of native Vision Transformers (ViTs), we will develop a multi-domain feature extraction pipeline. This pipeline will incorporate spatial and structural extractors like Xception and Patch-based feature extraction, statistical methods such as Neighboring Pixel Relationship (NPR), physical analysis through Sensor Noise Pattern Analysis, spectral examination via Frequency-Domain Masking (FDM), and semantic alignment using CLIP-ViT(L-14). Through this approach, we expect to deliver a more robust, multi-dimensional detection system that bridges the trust gap by achieving higher accuracy across unseen generative models while providing precise, human-readable forensic explanations. 
 
-Finally, we will evaluate the synthesis results using a dual-benchmark methodology. This comprises the ER-FF++ set to assess reasoning quality against human annotations for facial deepfakes, and the LOKI dataset to evaluate generalizability across diverse image categories. Classification performance will be measured using Accuracy and F1 Score, whereas explanation quality will be assessed via Consistency, Specificity, and Selectivity (CSS) alongside ROUGE-L.
+Finally, we will evaluate the synthesis results using a dual-benchmark methodology. This comprises the ER-FF++ (Explainable Reasoning - FaceForecasting)  set to assess reasoning quality against human annotations for facial deepfakes, and the LOKI dataset to evaluate generalizability across diverse image categories. Classification performance will be measured using Accuracy and F1 Score, whereas explanation quality will be assessed via Consistency, Specificity, and Selectivity (CSS) alongside ROUGE-L. These results will be compared with the results of the base FakeVLM along with other commonly used solutions, like FWA, CDFA and SRM, also used as comparisons on evaluation on the original FakeVLM paper [1].
 
 ## Schedule
 
@@ -54,3 +54,4 @@ Phase 5 (Week 9) entails the "Final Review & Deliverable Preparation", where the
 4. [Breaking Semantic Artifacts for Generalized AI-generated Image Detection](https://proceedings.neurips.cc/paper_files/paper/2024/hash/6dddcff5b115b40c998a08fbd1cea4d7-Abstract-Conference.html).
 5. [From Black Boxes to Glass Boxes: Explainable AI for Trustworthy Deepfake Forensics](https://www.mdpi.com/2410-387X/9/4/61).
 6. [Frequency-Domain Masking and Spatial Interaction for Generalizable Deepfake Detection](https://www.mdpi.com/2079-9292/14/7/1302).
+
