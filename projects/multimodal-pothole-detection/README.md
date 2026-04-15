@@ -1,7 +1,6 @@
-# dgm-2026.1
-# `<Reconstrução 2D para 3D baseada em aprendizado profundo para análise de buracos em vias públicas>`
+# Reconstrução 2D para 3D baseada em aprendizado profundo para análise de buracos em vias públicas
 
-# `<Deep Learning-Based 2D to 3D Reconstruction for Pothole Analysis>`
+# Deep Learning-Based 2D to 3D Reconstruction for Pothole Analysis
 
 ## Presentation
 
