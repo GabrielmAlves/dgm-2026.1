@@ -99,17 +99,20 @@ No transformations and cleaning were done up to now due to the fact that the exp
 
 ### Statistics:
 ### LAION-400M
-| Number of unique samples | 413M |  |
-| Number with height or width ≥ 1024 | 26M |  |
-| Number with height and width ≥ 1024 | 9.6M |  |
-| Number with height and width ≥ 512 | 67M |  |
-| Number with height or width ≥ 512 | 112M |  |
-| Number with height and width ≥ 256 | 211M |  |
-| Number with height or width ≥ 256 | 268M |  |
+| Statistic       | Quantity       |
+| ------------- | ----------------- |
+| Number of unique samples | 413M |
+| Number with height or width ≥ 1024 | 26M |
+| Number with height and width ≥ 1024 | 9.6M |
+| Number with height and width ≥ 512 | 67M |
+| Number with height or width ≥ 512 | 112M |
+| Number with height and width ≥ 256 | 211M |
+| Number with height or width ≥ 256 | 268M |
+
 ### Conceptual Captions
-| Train | 3.3M |  |
-| Validation | 28K |  |
-| Test | 22.5K |  |
+| Train | 3.3M |
+| Validation | 28K |
+| Test | 22.5K |
 
 ### Workflow
 <inserir_imagem_workflow>
