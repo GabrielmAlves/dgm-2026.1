@@ -122,7 +122,7 @@ No transformations and cleaning were done up to now due to the fact that the exp
 ![Resultado do experimento](imagens/flow_experimento1_dataset.png)
 
 ### Experimento 2 - Embeddings do CLIP
-![Resultado do experimento](imagens/flow_experimento2_dataset.png)
+![Resultado do experimento](imagens/flow_experimento2_clip.png)
 
 ### Experimento 3 - Cross-attention mechanism
 
