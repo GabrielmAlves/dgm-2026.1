@@ -138,6 +138,86 @@ No transformations and cleaning were done up to now due to the fact that the exp
 
 ### Experiment 3 - Cross-attention mechanism
 
+This experiment aimed to analyze the behavior of cross-attention maps in a text-to-image model, with the goal of understanding how the model distributes attention between object tokens and attribute tokens during image generation.
+
+More specifically, we investigated whether object-related tokens such as banana, carrot, and bear produce more spatially localized attention patterns than attribute-related tokens such as blue, yellow, purple, and white.
+
+To isolate these effects, we used simple and standardized prompts composed of a single object-color pair over a plain white background, reducing the influence of complex scene composition and additional semantic interactions.
+
+The following prompts were used throughout the experiment:
+
+"a photo of a blue banana on a plain white background"
+"a photo of a yellow banana on a plain white background"
+"a photo of an orange carrot on a plain white background"
+"a photo of a yellow carrot on a plain white background"
+"a photo of a purple polar bear on a plain white background"
+"a photo of a white polar bear on a plain white background"
+"a photo of a green blackboard on a plain white background"
+"a photo of a pink blackboard on a plain white background"
+"a photo of a green chalkboard on a plain white background"
+
+The analysis compared common object-attribute pairs, such as yellow banana and orange carrot, with less common or semantically unusual combinations, such as blue banana and purple polar bear. This comparison allows us to investigate whether rare attributes exhibit weaker visual association with their corresponding objects, even when explicitly specified in the prompt.
+
+The experiment employs metrics such as attention entropy and BindingScore. Attention entropy measures whether the attention distribution of a token is spatially concentrated or diffusely distributed across the image. In contrast, the BindingScore quantifies the degree of overlap between the attention map of a color attribute token and the spatial region associated with the corresponding object token.
+
+Therefore, the primary objective of the experiment is not limited to evaluating the final generated image, but rather to analyze whether the model effectively associates prompt tokens with the correct visual regions during the generation process.
+
+#### Main Concepts of the Experiment
+##### Tokens
+
+Tokens are the smallest textual units into which a prompt is divided before being processed by the model. Instead of interpreting the entire sentence at once, the model decomposes the prompt into words or subword units.
+
+*For example, in the prompt:*
+
+- a photo of a blue banana on a plain white background
+
+the most relevant tokens for this experiment are:
+
+- blue
+- banana
+- white
+- background
+
+Each token is converted into a numerical representation known as an embedding. These embeddings are then used by the model to condition the image generation process.
+
+##### Cross-Attention
+
+Cross-attention is the mechanism responsible for linking textual information to visual generation during the diffusion process. It enables the model to determine which image regions should attend to specific prompt tokens.
+
+*For example, in the prompt:*
+
+- blue banana
+
+the model is expected to use:
+
+- banana → to define the object identity and shape
+- blue → to define the object's color attribute
+
+If the attention map associated with the token banana is highly concentrated around the fruit region, this suggests that the model successfully localized the object.
+
+Conversely, if the attention map associated with blue appears spatially diffuse or extends beyond the object region, this may indicate weak attribute binding between the color token and the corresponding object.
+
+For this reason, cross-attention maps were analyzed throughout the experiment to investigate whether the model effectively associates prompt tokens with the correct visual regions.
+
+#### Results and Discussion of the Metrics
+The results show that, for all analyzed cases, the entropy of the color token was higher than the entropy of the corresponding object token. For instance, in the purple bear prompt, the entropy associated with the object token bear was 0.9374, whereas the entropy associated with the color token purple was 0.9912.
+
+The same pattern was observed for the other analyzed prompts, including white bear, yellow carrot, orange carrot, yellow banana, and blue banana. Since higher entropy indicates a more spatially diffuse attention distribution, these results suggest that object tokens tend to produce more localized attention maps, while color tokens tend to be distributed more broadly across the image.
+
+This pattern suggests that the model may be better at spatially localizing the object than at determining where the color attribute should be applied. In other words, the main difficulty does not appear to be only the generation or localization of the object itself. Tokens such as banana, carrot, and bear seem to be represented with relatively more localized attention patterns. The more challenging aspect appears to be the correct association between the requested color attribute and the spatial region corresponding to the object.
+
+This observation is relevant to the broader problem of attribute binding in text-to-image diffusion models. Prior work such as Attend-and-Excite and StructureDiffusion discusses failures in semantic alignment, including cases where concepts are neglected or attributes are incorrectly associated with objects in the generated image .
+
+The comparison between common and rare object-color combinations provides additional evidence in this direction. For the banana prompts, the common combination yellow banana obtained:
+
+- BindingScore(yellow → banana) = 0.5606
+
+In contrast, the rare combination blue banana obtained:
+
+- BindingScore(blue → banana) = 0.4099
+
+This difference suggests that the model achieved a stronger association between the color and the object in the common combination than in the rare one. In this specific comparison, the lower binding score for blue banana is compatible with the hypothesis that rare or statistically uncommon attribute-object combinations may be harder for the model to represent correctly.
+
 ## Conclusion
 By analyzing the results from our experiments, we concluded that the problem of attribute binding on diffusion models, in this case Stable Diffusion, comes from different components of the architecture instead of having just one responsible. The way the training dataset was generated, the problem of embedding representation on CLIP and the cross-attention mechanism failing to pay attention on certain attributes combined makes this an intrinsic problem of this architecture.
 
