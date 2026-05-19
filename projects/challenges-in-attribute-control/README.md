@@ -129,6 +129,7 @@ No transformations and cleaning were done up to now due to the fact that the exp
 
 ### Experiment 3 - Cross-attention mechanism
 
+![Resultado do experimento](imagens/flow_experimento3_cross_attention.jpg)
 
 ## Experiments, results and discussion of results
 
@@ -237,7 +238,17 @@ This interpretation is also supported by the comparison with the common combinat
 Quantitatively, this difference is reflected in the binding scores summarized below. The common combination yellow banana obtained a higher binding score than the rare combination blue banana:
 ![Generated image and metadata for the blue banana prompt](imagens/binding.jpg)
 
+A similar pattern was observed in the bear prompts. The common condition white bear obtained a higher binding score, BindingScore(white → bear) = 0.4715, while the rare condition purple bear obtained BindingScore(purple → bear) = 0.3955.
 
+As shown in the visualizations in imagens/purple_bear_cross_attention_bear.png and imagens/purple_bear_cross_attention_purple.png, the object token bear produced a more localized attention map over the animal region, while the color token purple appeared more diffuse and less consistently associated with the full bear region. Qualitatively, the generated image still resembles a mostly white polar bear, despite the prompt requesting a purple bear.
+
+This suggests that the model was able to generate and localize the object, but had more difficulty binding the uncommon color attribute to the correct object region. The comparison with white bear supports the hypothesis that common or visually plausible object-color combinations tend to produce stronger attribute-object associations than rare or artificial combinations.
+
+The metric analysis shows that object tokens were more spatially localized than color tokens in the analyzed prompts. This suggests that the model localizes the main object more reliably than it applies the requested color to the correct region.
+
+The BindingScore was also higher for common object-color combinations than for rare ones in the analyzed comparisons. This supports the hypothesis that the model may favor statistical regularities learned during training.
+
+Overall, the experiment suggests a limitation in attribute binding: the model may represent individual concepts, such as banana and blue, but still fail to combine them correctly when the requested combination is rare or conflicts with common real-world patterns.
 ## Conclusion
 By analyzing the results from our experiments, we concluded that the problem of attribute binding on diffusion models, in this case Stable Diffusion, comes from different components of the architecture instead of having just one responsible. The way the training dataset was generated, the problem of embedding representation on CLIP and the cross-attention mechanism failing to pay attention on certain attributes combined makes this an intrinsic problem of this architecture.
 
