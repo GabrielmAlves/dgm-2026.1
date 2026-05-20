@@ -109,6 +109,7 @@ No transformations and cleaning were done up to now due to the fact that the exp
 ### Experiment 1 - Dataset Analysis
 
 ![Resultado do experimento](imagens/flow_experimento1_dataset.png)
+
 Does the model learn true association (binding)? Or only co-occurrence? In other words, is it actually associating a specific attribute to a specific object, or are both appearing simultaneously?
 Example:
 “yellow banana” -> makes sense, we are assigning the color yellow to the banana object
