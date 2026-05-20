@@ -273,7 +273,7 @@ In experiment 3 - Cross Attention, it can be noted that when the model starts th
 
 ![Generated image and metadata for the blue banana prompt](imagens/Imagem_CrossAttentionUrso.png)
 
-Therefore, noting that the training data, experiment 1 - Dataset Analysis, does not present the necessary data to satisfy the request of the prompt, and that in the observed steps of experiment 2 - Generation Behavior, and in experiment 3 - Cross attention, the current Stable Diffusion model presented at https://yeri.ai/pt/app/image-generator is unable to meet the request made in the prompt.
+Therefore, noting that the training data, experiment 1 - Dataset Analysis, does not present the necessary data to satisfy the request of the prompt, and that in the observed steps of experiment 2 - Embeddings do CLIP, and in experiment 3 - Cross Attention, the current Stable Diffusion model presented at https://yeri.ai/pt/app/image-generator is unable to meet the request made in the prompt.
 
 Observing Figure 5, the structure of the Stable Diffusion model, one solution that can be proposed is to try to solve the database problem from the beginning of the model training. The idea is to generate statistically relevant databases in order to obtain a response, for training model, that answers the prompt request. Considering the size of the database and the number of parameters of the Stable Diffusion model, it was identified that it is more viable to work with a smaller database, a sample of the Conceptual Captions database, as well as to work with a simpler model, such as the CVAE and CNN-CVAE algorithms, to generate the image correctly, as requested in the prompt. The CVAE algorithm is described below, and the code will be available in the notebook named CVAE.
 
