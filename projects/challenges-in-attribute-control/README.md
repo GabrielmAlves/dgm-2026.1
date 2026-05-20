@@ -49,9 +49,6 @@ The outputs will be analyzed to check if:
 • it was applied to incorrect parts of the image or
 • it was completely ignored.
 
-Include in this section a link to the presentation video of the project proposal (maximum 5 minutes). – Retirar depois
-
-
 ## Proposed Methodology
 
 The project methodology will consist of the following steps: defining a controlled set of prompts, understanding the Stable Diffusion Model, building a synthetic dataset, generating images with a diffusion model and evaluating the results.
