@@ -10,14 +10,7 @@ with one row per image:
     object_raw, color_raw,
     object_predicted, color_predicted,
     binding_correct
-
-Like the Phase 1 script, this is idempotent: rows already present in
-the output file are skipped on re-run. A disconnection mid-judging
-recovers cleanly by re-executing.
-
-Usage (from repo root):
-    python experiments/exp3_judge.py --config configs/judge_default.yaml
-
+    
 Optional flags:
     --manifest PATH         override input.manifest_path
     --output-root PATH      override output.root
@@ -38,9 +31,9 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(_REPO_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT / "src"))
 
-from binding.io import load_yaml, make_run_dir, save_run_metadata  # noqa: E402
-from binding.seeds import set_all_seeds  # noqa: E402
-from binding.vlm_judge import VLMJudge  # noqa: E402
+from binding.io import load_yaml, make_run_dir, save_run_metadata  
+from binding.seeds import set_all_seeds 
+from binding.vlm_judge import VLMJudge  
 
 
 JUDGMENT_FIELDS = [
@@ -64,6 +57,12 @@ def parse_args() -> argparse.Namespace:
                    help="Override output.root from the config.")
     p.add_argument("--limit", type=int, default=None,
                    help="Judge only the first N rows. For smoke testing.")
+    p.add_argument("--images-root", default=None, type=Path,
+                   help="Root directory for resolving image paths. Defaults to "
+                        "the manifest's parent directory (correct for the main "
+                        "Phase 1 manifest). MUST be set when running on the "
+                        "calibration manifest, which lives in a different folder "
+                        "than the images (e.g. --images-root data/eval_images).")
     return p.parse_args()
 
 
@@ -100,9 +99,13 @@ def main() -> int:
     output_root = Path(args.output_root or cfg["output"]["root"])
     judgments_path = output_root / cfg["output"]["judgments_filename"]
 
-    # The manifest's image paths are relative to its parent directory
-    # (data/eval_images). Resolve them up front.
-    manifest_dir = manifest_path.parent
+    if args.images_root is not None:
+        images_root = args.images_root
+    else:
+        images_root = manifest_path.parent
+        print(f"[judge] --images-root not set; defaulting to {images_root}")
+    if not images_root.exists():
+        raise FileNotFoundError(f"images_root does not exist: {images_root}")
     manifest = load_manifest(manifest_path)
     if args.limit is not None:
         manifest = manifest[: args.limit]
@@ -123,9 +126,7 @@ def main() -> int:
         return 0
 
     set_all_seeds(42)
-
-    # Per-run metadata so we know exactly which model / config produced
-    # any given judgments file.
+    
     output_root.mkdir(parents=True, exist_ok=True)
     run_dir = make_run_dir("exp3_judging")
     save_run_metadata(
@@ -141,8 +142,6 @@ def main() -> int:
     )
     print(f"[judge] loaded on device: {judge.device}")
 
-    # Open the output CSV in append mode so each judgment is durable
-    # immediately. If the process dies, no judgments are lost.
     is_new = not judgments_path.exists()
     out_f = judgments_path.open("a", newline="", encoding="utf-8")
     writer = csv.DictWriter(out_f, fieldnames=JUDGMENT_FIELDS)
@@ -155,7 +154,7 @@ def main() -> int:
     pbar = tqdm(to_judge, desc="judging", unit="img")
     try:
         for row in pbar:
-            image_path = manifest_dir / row["path"]
+            image_path = images_root / row["path"]
             judgment = judge.judge_image(
                 image_path=image_path,
                 expected_object=row["object"],
@@ -173,8 +172,7 @@ def main() -> int:
             n_done += 1
             if judgment.binding_correct:
                 n_correct += 1
-            # Running accuracy in the progress bar — early signal that
-            # the judge is operating sensibly.
+
             pbar.set_postfix(acc=f"{n_correct / n_done:.1%}")
     finally:
         pbar.close()
