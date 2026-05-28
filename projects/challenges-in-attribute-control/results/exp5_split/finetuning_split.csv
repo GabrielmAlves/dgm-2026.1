@@ -1,0 +1,54 @@
+object,color,group,base_accuracy,npmi,category,image_source,is_orphan
+apple,black,held_out,0.4000,-0.2425,under,laion_recaption,0
+apple,blue,treated,0.5000,-0.2790,under,laion_recaption,0
+apple,brown,treated,0.0000,-1.0000,never,external_or_synthetic,0
+apple,green,control,0.9667,0.0536,positive,n/a,0
+apple,orange,treated,0.1333,-0.1745,under,laion_recaption,0
+apple,pink,held_out,0.0667,-0.2172,under,laion_recaption,0
+apple,purple,held_out,0.3333,-0.1568,under,laion_recaption,0
+apple,red,control,1.0000,-0.0231,under,n/a,0
+apple,white,treated,0.3333,-0.1993,under,laion_recaption,0
+bag,brown,control,1.0000,-0.1443,under,n/a,0
+ball,black,treated,0.4000,-0.2832,under,laion_recaption,0
+ball,orange,held_out,0.4000,-0.1282,under,laion_recaption,0
+ball,red,control,1.0000,-0.1558,under,n/a,0
+ball,yellow,control,0.9667,-0.1575,under,n/a,0
+banana,black,held_out,0.1667,-1.0000,never,external_or_synthetic,0
+banana,blue,treated,0.2000,-0.0406,under,laion_recaption,0
+banana,brown,treated,0.0667,-1.0000,never,external_or_synthetic,0
+banana,orange,treated,0.0000,-0.0361,under,laion_recaption,0
+banana,pink,held_out,0.4667,-0.0787,under,laion_recaption,0
+banana,purple,treated,0.4667,-1.0000,never,external_or_synthetic,0
+banana,red,control,0.9667,-0.1319,under,n/a,0
+banana,white,held_out,0.0333,-1.0000,never,external_or_synthetic,0
+banana,yellow,control,1.0000,-0.0124,under,n/a,0
+car,blue,control,1.0000,-0.1640,under,n/a,0
+car,green,control,1.0000,-0.2230,under,n/a,0
+car,orange,control,1.0000,-0.1725,under,n/a,0
+car,pink,control,1.0000,-0.2583,under,n/a,0
+chalkboard,black,control,0.9000,-0.0468,under,n/a,0
+chalkboard,blue,held_out,0.5000,-1.0000,never,external_or_synthetic,0
+chalkboard,brown,treated,0.1000,-1.0000,never,external_or_synthetic,0
+chalkboard,orange,treated,0.0000,-1.0000,never,external_or_synthetic,0
+chalkboard,pink,held_out,0.0000,-1.0000,never,external_or_synthetic,0
+chalkboard,purple,treated,0.2333,-1.0000,never,external_or_synthetic,0
+chalkboard,red,held_out,0.1667,-0.0744,under,laion_recaption,0
+chalkboard,white,treated,0.0000,-1.0000,never,external_or_synthetic,0
+chalkboard,yellow,held_out,0.0000,-1.0000,never,external_or_synthetic,0
+flower,blue,control,0.9000,-0.0429,under,n/a,0
+flower,brown,treated,0.5000,-0.2165,under,laion_recaption,1
+flower,orange,control,0.9000,0.0035,positive,n/a,0
+flower,pink,control,0.9000,0.0823,positive,n/a,0
+flower,purple,control,0.9667,0.0919,positive,n/a,0
+flower,red,control,1.0000,-0.0472,under,n/a,0
+flower,white,control,0.9000,-0.0839,under,n/a,0
+polar bear,black,control,0.9000,-1.0000,never,n/a,0
+polar bear,blue,treated,0.0333,-0.0345,under,laion_recaption,0
+polar bear,brown,held_out,0.1667,-1.0000,never,external_or_synthetic,0
+polar bear,green,treated,0.1667,-1.0000,never,external_or_synthetic,0
+polar bear,orange,treated,0.2333,-1.0000,never,external_or_synthetic,0
+polar bear,pink,treated,0.3000,-1.0000,never,external_or_synthetic,0
+polar bear,purple,held_out,0.2333,-1.0000,never,external_or_synthetic,0
+polar bear,red,held_out,0.4000,-1.0000,never,external_or_synthetic,0
+polar bear,white,control,1.0000,0.0218,positive,n/a,0
+polar bear,yellow,held_out,0.1667,-1.0000,never,external_or_synthetic,0

@@ -1,0 +1,190 @@
+{
+  "n_joined_pairs": 120,
+  "global_accuracy": 0.7125,
+  "spearman_global": {
+    "rho": 0.29952521944222354,
+    "ci_lo": 0.10629125429464534,
+    "ci_hi": 0.4706193360630099
+  },
+  "spearman_by_category": {
+    "never": {
+      "rho": NaN,
+      "ci_lo": NaN,
+      "ci_hi": NaN,
+      "n_pairs": 41
+    },
+    "under": {
+      "rho": 0.017230747931686975,
+      "ci_lo": -0.22653292403831005,
+      "ci_hi": 0.25749352735154174,
+      "n_pairs": 71
+    },
+    "positive": {
+      "rho": -0.12123216124221799,
+      "ci_lo": -0.8554982035759168,
+      "ci_hi": 0.7190924955066748,
+      "n_pairs": 8
+    }
+  },
+  "accuracy_by_category": {
+    "never": {
+      "n_pairs": 41,
+      "mean": 0.5447154471544715,
+      "sd": 0.37831531822712106
+    },
+    "positive": {
+      "n_pairs": 8,
+      "mean": 0.8916666666666667,
+      "sd": 0.13411230782859235
+    },
+    "under": {
+      "n_pairs": 71,
+      "mean": 0.7892018779342723,
+      "sd": 0.28432027213737865
+    }
+  },
+  "worst_10_pairs": [
+    {
+      "object": "apple",
+      "color": "brown",
+      "accuracy": 0.0,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "banana",
+      "color": "orange",
+      "accuracy": 0.0,
+      "npmi": -0.036053138942425816,
+      "category": "under"
+    },
+    {
+      "object": "chalkboard",
+      "color": "orange",
+      "accuracy": 0.0,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "chalkboard",
+      "color": "pink",
+      "accuracy": 0.0,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "chalkboard",
+      "color": "white",
+      "accuracy": 0.0,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "chalkboard",
+      "color": "yellow",
+      "accuracy": 0.0,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "banana",
+      "color": "white",
+      "accuracy": 0.03333333333333333,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "polar bear",
+      "color": "blue",
+      "accuracy": 0.03333333333333333,
+      "npmi": -0.0344558727238519,
+      "category": "under"
+    },
+    {
+      "object": "apple",
+      "color": "pink",
+      "accuracy": 0.06666666666666667,
+      "npmi": -0.21720118770986957,
+      "category": "under"
+    },
+    {
+      "object": "banana",
+      "color": "brown",
+      "accuracy": 0.06666666666666667,
+      "npmi": -1.0,
+      "category": "never"
+    }
+  ],
+  "best_10_pairs": [
+    {
+      "object": "shoe",
+      "color": "red",
+      "accuracy": 1.0,
+      "npmi": -0.18093399792545573,
+      "category": "under"
+    },
+    {
+      "object": "shoe",
+      "color": "purple",
+      "accuracy": 1.0,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "shoe",
+      "color": "orange",
+      "accuracy": 1.0,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "shoe",
+      "color": "green",
+      "accuracy": 1.0,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "shoe",
+      "color": "brown",
+      "accuracy": 1.0,
+      "npmi": -0.11160912270166258,
+      "category": "under"
+    },
+    {
+      "object": "shoe",
+      "color": "black",
+      "accuracy": 1.0,
+      "npmi": -1.0,
+      "category": "never"
+    },
+    {
+      "object": "polar bear",
+      "color": "white",
+      "accuracy": 1.0,
+      "npmi": 0.021794907876980078,
+      "category": "positive"
+    },
+    {
+      "object": "frog",
+      "color": "green",
+      "accuracy": 1.0,
+      "npmi": 0.059777754805078256,
+      "category": "positive"
+    },
+    {
+      "object": "flower",
+      "color": "red",
+      "accuracy": 1.0,
+      "npmi": -0.04716299057916912,
+      "category": "under"
+    },
+    {
+      "object": "dog",
+      "color": "white",
+      "accuracy": 1.0,
+      "npmi": -0.14819293143202675,
+      "category": "under"
+    }
+  ]
+}
