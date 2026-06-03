@@ -46,8 +46,8 @@ if TYPE_CHECKING:
 CANONICAL_HUE: dict[str, int] = {
     "red":    0,
     "orange": 13,    
-    "yellow": 28,    
-    "green":  60,   
+    "yellow": 28,   
+    "green":  60,    
     "blue":   110,   
     "purple": 140,   
     "pink":   163,   
@@ -60,10 +60,10 @@ DESATURATED = {"brown"}
 class RecolorResult:
     """Outcome of a recoloration attempt."""
     image: np.ndarray              
-    mask: np.ndarray              
+    mask: np.ndarray               
     mask_area_frac: float          
     accepted: bool                 
-    reason: str                   
+    reason: str                    
 
 def _rgb_to_hsv_uint8(rgb: np.ndarray) -> np.ndarray:
     """
@@ -227,7 +227,7 @@ class SegmentationPipeline:
     def _ensure_loaded(self) -> None:
         if self._dino_model is not None:
             return
-        
+
         import torch
         from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
         from sam2.sam2_image_predictor import SAM2ImagePredictor
@@ -276,13 +276,23 @@ class SegmentationPipeline:
         with torch.no_grad():
             outputs = self._dino_model(**inputs)
 
-        results = self._dino_processor.post_process_grounded_object_detection(
-            outputs,
-            inputs.input_ids,
-            box_threshold=self.box_threshold,
-            text_threshold=self.text_threshold,
-            target_sizes=[image.size[::-1]],
-        )
+        post_process = self._dino_processor.post_process_grounded_object_detection
+        try:
+            results = post_process(
+                outputs,
+                inputs.input_ids,
+                threshold=self.box_threshold,
+                text_threshold=self.text_threshold,
+                target_sizes=[image.size[::-1]],
+            )
+        except TypeError:
+            results = post_process(
+                outputs,
+                inputs.input_ids,
+                box_threshold=self.box_threshold,
+                text_threshold=self.text_threshold,
+                target_sizes=[image.size[::-1]],
+            )
         if not results or len(results[0]["boxes"]) == 0:
             return None
 
