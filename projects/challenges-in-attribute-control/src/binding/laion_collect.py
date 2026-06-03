@@ -40,7 +40,6 @@ class Candidate:
     width: int | None = None
     height: int | None = None
 
-
 @dataclass
 class CollectionTargets:
     """How many candidates we still need per (object, color) pair."""
@@ -57,13 +56,11 @@ class CollectionTargets:
         if key in self.needed:
             self.needed[key] -= 1
 
-
 def caption_mentions(caption: str, word: str) -> bool:
     """Case-insensitive whole-word-ish membership (mirrors Exp1 contains_word)."""
     if not caption:
         return False
     return word.lower() in caption.lower()
-
 
 def is_gap_candidate(
     caption: str,
@@ -77,6 +74,9 @@ def is_gap_candidate(
     Experiment 1 counted as co-occurring-without-binding — images likely
     showing the pair, captioned in a way that loses the binding signal.
 
+    Used for Phase 5 treated/held_out collection: these are the cases the
+    finetuning dataset will fix by re-captioning via VLM ground truth.
+
     binding_fn is the object_color_pair function from Experiment 1
     (injected to keep this module decoupled from the regex implementation).
     """
@@ -89,6 +89,29 @@ def is_gap_candidate(
     return True
 
 
+def is_bound_candidate(
+    caption: str,
+    obj: str,
+    color: str,
+    binding_fn,
+) -> bool:
+    """
+    A caption is a 'bound candidate' for (obj, color) when both words appear
+    AND the syntactic binding pattern fires. These are well-formatted captions
+    like "a red apple", "the green frog" — exactly what's wanted for the
+    control set: canonical pairs the model should keep getting right
+    after finetuning (anchors against catastrophic forgetting).
+
+    The image still needs VLM verification — captioning errors exist even in
+    bound captions — but the prior on these is very high: the LAION caption
+    structure matches the truth more often than not.
+    """
+    cl = caption.lower()
+    if not (caption_mentions(cl, obj) and caption_mentions(cl, color)):
+        return False
+    return binding_fn(cl, obj, color)
+
+
 def iter_candidates(
     dataset,
     targets: CollectionTargets,
@@ -96,6 +119,7 @@ def iter_candidates(
     max_scan: int = 2_000_000,
     url_field: str = "url",
     caption_field: str = "caption",
+    predicate=None,
 ) -> Iterator[Candidate]:
     """
     Stream the LAION dataset, yielding Candidates for pairs still needed.
@@ -103,9 +127,15 @@ def iter_candidates(
     Stops when either `targets.remaining()` hits zero or `max_scan` rows
     have been inspected (a safety cap so a rare pair doesn't scan forever).
 
+    `predicate` is the function that decides if a (caption, obj, color)
+    triple is a candidate. Defaults to is_gap_candidate (Phase 5 default).
+    Pass is_bound_candidate for the control-set collection.
+
     The caller is responsible for downloading and VLM-verifying each
     candidate; this generator only nominates them by caption.
     """
+    if predicate is None:
+        predicate = is_gap_candidate
     objects = sorted({o for (o, _c) in targets.needed})
     colors = sorted({c for (_o, c) in targets.needed})
 
@@ -130,7 +160,7 @@ def iter_candidates(
             for color in colors:
                 if not targets.want(obj, color):
                     continue
-                if is_gap_candidate(caption, obj, color, binding_fn):
+                if predicate(caption, obj, color, binding_fn):
                     targets.record(obj, color)
                     yield Candidate(
                         object_name=obj,

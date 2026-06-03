@@ -19,7 +19,6 @@ from binding.laion_collect import (
 def fake_binding(caption: str, obj: str, color: str) -> bool:
     return f"{color} {obj}" in caption.lower()
 
-
 def test_caption_mentions_case_insensitive():
     assert caption_mentions("A Blue Banana", "blue")
     assert caption_mentions("A Blue Banana", "banana")
@@ -53,7 +52,7 @@ def test_collection_targets_accounting():
     assert t.needed[("banana", "orange")] == 1
     assert t.remaining() == 2
     t.record("banana", "orange")
-    assert not t.want("banana", "orange")
+    assert not t.want("banana", "orange")  
     assert t.remaining() == 1
 
 
@@ -61,7 +60,7 @@ def test_iter_candidates_respects_targets():
     """The generator should stop nominating a pair once its target is met."""
     rows = [
         {"caption": "banana, color orange, fresh", "url": "u1", "width": 500, "height": 500},
-        {"caption": "orange banana ripe", "url": "u2"},  
+        {"caption": "orange banana ripe", "url": "u2"}, 
         {"caption": "banana photo, orange background", "url": "u3"},  
         {"caption": "banana, orange tag", "url": "u4"},  
     ]
@@ -71,7 +70,6 @@ def test_iter_candidates_respects_targets():
     assert len(got) == 2
     assert all(isinstance(c, Candidate) for c in got)
     assert all(c.object_name == "banana" and c.color == "orange" for c in got)
-
     assert "u2" not in [c.url for c in got]
 
 
@@ -93,3 +91,45 @@ def test_iter_candidates_multiple_pairs():
     got = list(iter_candidates(rows, targets, fake_binding, max_scan=100))
     pairs = {(c.object_name, c.color) for c in got}
     assert pairs == {("banana", "orange"), ("apple", "blue")}
+
+from binding.laion_collect import is_bound_candidate  
+
+def test_bound_candidate_accepts_bound_caption():
+    """A caption with explicit binding ('orange banana') is a bound candidate."""
+    cap = "a fresh orange banana on a table"
+    assert is_bound_candidate(cap, "banana", "orange", fake_binding)
+
+
+def test_bound_candidate_rejects_unbound_cooccurrence():
+    """If words appear but without binding pattern, it's NOT a bound candidate."""
+    cap = "banana, color orange, fresh"
+    assert not is_bound_candidate(cap, "banana", "orange", fake_binding)
+
+
+def test_bound_and_gap_are_disjoint():
+    """For the same (caption, obj, color), at most one predicate fires."""
+    captions = [
+        "a fresh orange banana",         
+        "banana, color orange, fresh",   
+        "apple pie no banana",           
+        "orange juice no fruit",         
+    ]
+    for cap in captions:
+        g = is_gap_candidate(cap, "banana", "orange", fake_binding)
+        b = is_bound_candidate(cap, "banana", "orange", fake_binding)
+        assert not (g and b), f"both predicates fired for: {cap!r}"
+
+def test_iter_candidates_bound_mode():
+    """Using is_bound_candidate as predicate harvests the bound captions, not gaps."""
+    from binding.laion_collect import is_bound_candidate
+    rows = [
+        {"caption": "orange banana ripe",          "url": "u1"},  
+        {"caption": "banana, color orange",        "url": "u2"},  
+        {"caption": "a fresh orange banana",       "url": "u3"},  
+    ]
+    targets = CollectionTargets(needed={("banana", "orange"): 5})
+    got = list(iter_candidates(rows, targets, fake_binding,
+                                max_scan=100, predicate=is_bound_candidate))
+    urls = [c.url for c in got]
+    assert "u2" not in urls
+    assert "u1" in urls and "u3" in urls
