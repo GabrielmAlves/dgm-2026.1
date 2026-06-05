@@ -1,0 +1,280 @@
+object,target_color,source_path,source_original_color,augment_seed,stage,reason,vlm_object_predicted,vlm_color_predicted
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_000.png,red,42854892,vlm,color:red,apple,red
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_000.png,green,42207908,vlm,color:green,apple,green
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_002.png,red,42650371,vlm,color:red,apple,red
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_003.png,green,42500240,recolor,mask too small (0.9% < 2.0%),,
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_005.png,red,42853259,vlm,object:unmatched,unmatched,blue
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_004.png,green,42801283,vlm,color:green,apple,green
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_008.png,red,42651152,recolor,mask too small (1.5% < 2.0%),,
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_013.png,red,42592797,vlm,object:unmatched,unmatched,blue
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_000.png,red,42244524,vlm,object:unmatched color:red,unmatched,red
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_000.png,green,42543235,vlm,color:green,apple,green
+apple,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_002.png,red,42390690,vlm,color:red,apple,red
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_000.png,red,42772921,vlm,color:red,apple,red
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_000.png,green,42476624,vlm,color:green,apple,green
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_002.png,red,42324079,vlm,color:red,apple,red
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_001.png,green,42975809,vlm,color:green,apple,green
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_003.png,green,42418269,recolor,mask too small (0.9% < 2.0%),,
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_005.png,red,42121972,vlm,object:unmatched,unmatched,brown
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_004.png,green,42069996,vlm,color:green,apple,green
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_009.png,green,42621157,vlm,object:unmatched,unmatched,brown
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_008.png,red,42569181,recolor,mask too small (1.5% < 2.0%),,
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_011.png,green,42867892,vlm,object:unmatched,unmatched,brown
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_013.png,red,42665785,vlm,object:unmatched,unmatched,brown
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_000.png,red,42513240,vlm,object:unmatched color:red,unmatched,red
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_000.png,green,42866259,vlm,color:green,apple,green
+apple,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_002.png,red,42713714,vlm,color:red,apple,red
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_000.png,red,42747957,vlm,color:red,apple,red
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_000.png,green,42100973,vlm,color:green,apple,green
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_002.png,red,42698395,vlm,color:red,apple,red
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_003.png,red,42247139,vlm,color:brown,apple,brown
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_001.png,green,42545850,vlm,color:brown,apple,brown
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_003.png,green,42197577,recolor,mask too small (1.1% < 2.0%),,
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_005.png,red,42692016,vlm,object:unmatched,unmatched,orange
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_004.png,green,42045032,vlm,color:green,apple,green
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_009.png,green,42191198,vlm,object:unmatched,unmatched,orange
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_008.png,red,42544217,vlm,object:unmatched color:red,unmatched,red
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_011.png,green,42842928,vlm,object:unmatched,unmatched,orange
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_014.png,green,42690383,vlm,color:brown,apple,brown
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_012.png,red,42342110,vlm,color:red,apple,red
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_013.png,red,42290134,vlm,color:red,apple,red
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_000.png,green,42436300,vlm,color:green,apple,green
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_001.png,red,42789319,vlm,object:unmatched,unmatched,orange
+apple,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_002.png,red,42088027,vlm,color:red,apple,red
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_000.png,red,42389519,vlm,color:red,apple,red
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_000.png,green,42093222,vlm,color:green,apple,green
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_001.png,red,42041246,vlm,object:ball,ball,white
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_002.png,red,42394265,vlm,color:red,apple,red
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_003.png,red,42888704,vlm,color:red,apple,red
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_001.png,green,42187412,vlm,object:unmatched color:green,unmatched,green
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_003.png,green,42839142,recolor,mask too small (1.0% < 2.0%),,
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_004.png,green,42686597,vlm,color:green,apple,green
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_006.png,green,42338324,vlm,object:unmatched,unmatched,white
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_009.png,green,42832763,vlm,object:ball,ball,white
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_008.png,red,42185779,vlm,color:red,apple,red
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_011.png,green,42484490,vlm,object:unmatched color:green,unmatched,green
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_012.png,green,42837509,vlm,object:unmatched color:pink,unmatched,pink
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_013.png,red,42931699,vlm,object:unmatched,unmatched,white
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_000.png,red,42129838,vlm,color:red,apple,red
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/green/cand_000.png,green,42482857,vlm,color:green,apple,green
+apple,white,/content/drive/MyDrive/binding-research/finetuning/control_candidates/apple/red/cand_002.png,red,42925320,vlm,color:red,apple,red
+banana,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42284662,vlm,color:red,banana,red
+banana,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42884416,vlm,color:red,banana,red
+banana,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42030579,vlm,color:red,banana,red
+banana,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42176745,vlm,color:red,banana,red
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42562374,vlm,color:red,banana,red
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42861085,vlm,color:brown,banana,brown
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42708540,vlm,color:red,banana,red
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42007248,vlm,color:brown,banana,brown
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42658978,vlm,color:red,banana,red
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42207722,vlm,color:yellow,banana,yellow
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42859452,vlm,color:red,banana,red
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42158160,vlm,color:yellow,banana,yellow
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42005615,vlm,color:red,banana,red
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42953642,vlm,color:yellow,banana,yellow
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42151781,vlm,color:red,banana,red
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42504800,vlm,color:yellow,banana,yellow
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42751535,vlm,color:red,banana,red
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42650966,vlm,color:brown,banana,brown
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42302693,vlm,color:red,banana,red
+banana,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42250717,vlm,color:brown,banana,brown
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42910280,vlm,color:red,banana,red
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42459024,vlm,object:flower,flower,purple
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42409462,vlm,object:flower,flower,purple
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42555628,vlm,object:flower,flower,purple
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42756102,vlm,object:flower,flower,purple
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42002834,vlm,color:red,banana,red
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42902268,vlm,object:flower,flower,purple
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42502019,vlm,object:flower,flower,purple
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/red/cand_000.png,red,42700161,vlm,color:red,banana,red
+banana,purple,/content/drive/MyDrive/binding-research/finetuning/control_candidates/banana/yellow/cand_001.png,yellow,42199343,vlm,object:flower,flower,purple
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42642971,recolor,mask too large (98.7% > 98.0%),,
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42294698,vlm,color:black,chalkboard,black
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42593409,vlm,color:black,chalkboard,black
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42142153,vlm,object:unmatched,unmatched,brown
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42793883,vlm,color:green,chalkboard,green
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42092591,vlm,color:black,chalkboard,black
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42940049,vlm,object:unmatched,unmatched,brown
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42238757,vlm,object:unmatched,unmatched,brown
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42086212,vlm,object:chair color:black,chair,black
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42439231,vlm,color:black,chalkboard,black
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42737942,vlm,object:unmatched color:green,unmatched,green
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_017.png,green,42685966,vlm,object:unmatched,unmatched,brown
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42585397,vlm,color:green,chalkboard,green
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42185148,recolor,mask too large (98.6% > 98.0%),,
+chalkboard,brown,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42888854,vlm,object:unmatched,unmatched,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42118822,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42066846,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42770552,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42718576,vlm,object:unmatched color:brown,unmatched,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42618007,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_013.png,green,42916718,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42269734,vlm,color:black,chalkboard,black
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42217758,vlm,color:black,chalkboard,black
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42712197,vlm,color:green,chalkboard,green
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_017.png,green,42415900,vlm,object:unmatched color:brown,unmatched,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42363924,vlm,color:green,chalkboard,green
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42067627,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42015651,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42915085,recolor,mask too large (99.5% > 98.0%),,
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42863109,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_013.png,green,42161817,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42514836,vlm,color:black,chalkboard,black
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42009272,vlm,color:black,chalkboard,black
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42362291,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_017.png,green,42661002,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42959713,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42508457,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42807168,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42160184,recolor,mask too large (99.1% > 98.0%),,
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42458895,vlm,color:brown,chalkboard,brown
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42603151,vlm,color:green,chalkboard,green
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42749317,vlm,object:unmatched,unmatched,purple
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42895483,vlm,object:unmatched,unmatched,purple
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42248499,vlm,color:black,chalkboard,black
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42394665,vlm,color:green,chalkboard,green
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42046392,vlm,color:green,chalkboard,green
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42540831,recolor,mask too large (98.2% > 98.0%),,
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_013.png,green,42192558,vlm,object:unmatched,unmatched,purple
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42545577,vlm,object:unmatched,unmatched,purple
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42190925,vlm,object:unmatched,unmatched,purple
+chalkboard,purple,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42489636,vlm,object:unmatched,unmatched,purple
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42760387,vlm,color:unmatched,chalkboard,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42113403,vlm,object:unmatched color:unmatched,unmatched,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42412114,vlm,color:green,chalkboard,green
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42710825,recolor,mask too large (98.1% > 98.0%),,
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42259569,vlm,object:unmatched color:green,unmatched,green
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_013.png,green,42558280,vlm,color:unmatched,chalkboard,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42911299,vlm,object:chair color:black,chair,black
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42210007,vlm,object:unmatched color:unmatched,unmatched,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42758754,vlm,color:green,chalkboard,green
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_017.png,green,42057462,vlm,object:unmatched color:unmatched,unmatched,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42005486,vlm,object:unmatched color:unmatched,unmatched,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42709192,vlm,object:unmatched color:unmatched,unmatched,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42203628,vlm,color:black,chalkboard,black
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42556647,vlm,object:unmatched color:unmatched,unmatched,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42855358,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_013.png,green,42208374,vlm,color:unmatched,chalkboard,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42156398,vlm,object:chair color:black,chair,black
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42650837,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42354540,vlm,color:green,chalkboard,green
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_017.png,green,42302564,vlm,object:unmatched color:unmatched,unmatched,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42655583,vlm,color:unmatched,chalkboard,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42150019,vlm,object:unmatched color:unmatched,unmatched,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42448730,vlm,color:green,chalkboard,green
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42801749,vlm,object:unmatched color:unmatched,unmatched,unmatched
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42100457,vlm,object:unmatched color:unmatched,unmatched,unmatched
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/purple/cand_000.png,purple,42139102,vlm,color:white,flower,white
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/pink/cand_000.png,pink,42790832,recolor,mask too large (99.5% > 98.0%),,
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/purple/cand_002.png,purple,42638287,recolor,mask too small (1.6% < 2.0%),,
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/red/cand_003.png,red,42290014,vlm,color:red,flower,red
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/blue/cand_003.png,blue,42588725,vlm,object:unmatched,unmatched,brown
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/white/cand_004.png,white,42137469,vlm,color:white,flower,white
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/pink/cand_008.png,pink,42087907,vlm,color:white,flower,white
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/purple/cand_005.png,purple,42582346,vlm,color:black,flower,black
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/white/cand_012.png,white,42234073,vlm,object:unmatched,unmatched,brown
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/pink/cand_014.png,pink,42434547,vlm,color:orange,flower,orange
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/purple/cand_008.png,purple,42733258,vlm,color:white,flower,white
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/white/cand_014.png,white,42031966,vlm,object:unmatched,unmatched,brown
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/purple/cand_014.png,purple,42580713,vlm,color:purple,flower,purple
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/orange/cand_006.png,orange,42232440,vlm,color:orange,flower,orange
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/orange/cand_008.png,orange,42531151,segmentation,no detection,,
+flower,brown,/content/drive/MyDrive/binding-research/finetuning/control_candidates/flower/orange/cand_009.png,orange,42884170,vlm,object:unmatched,unmatched,brown
+polar bear,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42298079,vlm,color:white,polar bear,white
+polar bear,blue,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42891454,vlm,color:white,polar bear,white
+polar bear,green,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42143490,vlm,color:white,polar bear,white
+polar bear,green,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42642675,vlm,color:white,polar bear,white
+polar bear,green,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42141857,vlm,color:white,polar bear,white
+polar bear,green,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42236047,vlm,object:unmatched color:white,unmatched,white
+polar bear,green,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42735232,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42844507,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_001.png,white,42197523,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42496234,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42044978,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42343689,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_001.png,white,42696708,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42995419,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42943443,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42842874,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_001.png,white,42790898,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42494601,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42442625,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42937064,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_001.png,white,42640767,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42588791,segmentation,no detection,,
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42941810,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42436246,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_001.png,white,42139949,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42087973,vlm,object:unmatched color:white,unmatched,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42386684,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42935431,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_001.png,white,42234139,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42587158,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42885869,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42434613,vlm,color:brown,polar bear,brown
+polar bear,pink,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42892123,vlm,color:white,polar bear,white
+polar bear,pink,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42485495,vlm,color:white,polar bear,white
+polar bear,pink,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42984680,vlm,color:white,polar bear,white
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42566224,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42919243,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42413679,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42766698,vlm,object:unmatched color:brown,unmatched,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42065406,vlm,object:unmatched color:brown,unmatched,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_013.png,green,42013430,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42912864,vlm,color:black,chalkboard,black
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42860888,vlm,color:black,chalkboard,black
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42564591,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_017.png,green,42512615,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42412046,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42710757,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42658781,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42011797,vlm,object:unmatched color:brown,unmatched,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42310508,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_013.png,green,42209939,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42157963,vlm,color:black,chalkboard,black
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42510982,vlm,color:black,chalkboard,black
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42809693,vlm,color:green,chalkboard,green
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_017.png,green,42304129,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42657148,vlm,object:unmatched color:brown,unmatched,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42955859,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42308875,vlm,color:brown,chalkboard,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42803314,vlm,object:unmatched color:brown,unmatched,brown
+chalkboard,orange,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42102022,vlm,color:brown,chalkboard,brown
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42731589,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42875341,vlm,color:green,chalkboard,green
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42579044,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42527068,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_013.png,green,42230771,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42725210,vlm,object:unmatched color:black,unmatched,black
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42078226,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42026250,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_017.png,green,42324961,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42172416,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42876122,vlm,color:green,chalkboard,green
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42824146,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42177162,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_013.png,green,42671601,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_011.png,black,42970312,vlm,object:unmatched color:black,unmatched,black
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/black/cand_017.png,black,42323328,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_015.png,green,42622039,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_017.png,green,42170783,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_003.png,green,42469494,vlm,color:green,chalkboard,green
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_004.png,green,42822513,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_007.png,green,42121221,vlm,color:green,chalkboard,green
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_010.png,green,42615660,vlm,object:unmatched,unmatched,white
+chalkboard,white,/content/drive/MyDrive/binding-research/finetuning/canonical_extra_candidates/chalkboard/green/cand_011.png,green,42968679,vlm,object:unmatched,unmatched,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42737224,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42035932,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42388951,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42587093,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42535117,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42888136,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42681283,vlm,object:unmatched color:white,unmatched,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42034299,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_000.png,white,42333010,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42180465,vlm,object:unmatched,unmatched,orange
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42479176,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42679650,vlm,color:white,polar bear,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42978361,vlm,color:brown,polar bear,brown
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_002.png,white,42124524,vlm,object:unmatched color:white,unmatched,white
+polar bear,orange,/content/drive/MyDrive/binding-research/finetuning/control_candidates/polar_bear/white/cand_003.png,white,42477543,vlm,color:white,polar bear,white
