@@ -402,11 +402,11 @@ Rombach, R. et al. (2021). “High-Resolution Image Synthesis with Latent Diffus
 
 Ho, J., A. Jain e P. Abbeel (2020). “Denoising Diffusion Probabilistic Models”. Em: CoRR abs/2006.11239. url: https://arxiv.org/abs/2006.11239 (ver p. 20).
 
-Sharma, P. et al (2018). Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset For Automatic Image Captioning. Url: https://aclanthology.org/P18-1238.pdf 
+Sharma, P. et al (2018). “Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset For Automatic Image Captioning”. Url: https://aclanthology.org/P18-1238.pdf 
 
-Schuhmann, C. et al (2021): LAION-400M: Open Dataset of CLIP-Filtered 400 Million Image-Text Pairs. Url: https://arxiv.org/abs/2111.02114
+Schuhmann, C. et al (2021): “LAION-400M: Open Dataset of CLIP-Filtered 400 Million Image-Text Pairs”. Url: https://arxiv.org/abs/2111.02114
 
-Schuhmann, C. et al (2022): LAION-5B: An open large-scale dataset for training next generation image-text. Url: https://arxiv.org/abs/2210.08402
+Schuhmann, C. et al (2022): “LAION-5B: An open large-scale dataset for training next generation image-text”. Url: https://arxiv.org/abs/2210.08402
 
 Nichol, A. et al. (2021). “GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models”. Em: CoRR abs/2112.10741. url: https://arxiv.org/abs/2112.10741 (ver p. 20).
 
