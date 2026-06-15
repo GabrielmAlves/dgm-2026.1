@@ -312,23 +312,14 @@ Latent dimension z, trained CNN-CVAE model θ, and input prompt c.
 Output: Generated image x ̂.
 
 1.  Load the trained CNN-CVAE parameters θ, 
-	
 2.  Encode the conditional prompt c into a condition embedding vector e_c,
-	
 3.  Sample a latent vector z∼N(0,I), 
-	
 4.  Concatenate the latent vector and conditional embedding h=[z,e_c ], 
-	
 5.  Project h into an initial latent feature map through a fully connected layer, 
-	
 6.  Pass the feature map through the convolutional decoder network: x ̂=Decoder_θ (h), 
-	
 7.  Apply successive transposed convolution layers to progressively increase spatial resolution, 
-	
 8.  Apply sigmoid activation to obtain pixel intensities in the interval [0ⓜ,1], 
-	
 9.  Reshape the output into RGB image format 3×64×64, 
-	
 10. Return generated image x ̂.
 
 Another solution would be to study and propose a change to the Cross Attention algorithm so that it can generate the image taking into account the prompt request in the intermediate layers of the UNet.
