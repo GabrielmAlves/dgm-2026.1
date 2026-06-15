@@ -252,12 +252,11 @@ The BindingScore was also higher for common object-color combinations than for r
 Overall, the experiment suggests a limitation in attribute binding: the model may represent individual concepts, such as banana and blue, but still fail to combine them correctly when the requested combination is rare or conflicts with common real-world patterns.
 
 
-### Experiment 4 - CVAE – Linear and CNN-CVAE
+### Experiment 4 - CNN-CVAE and Conceptual Captions Dataset 
 
-Based on the papers by Rombach et al., 2021, and Ho et al., 2020, this study sought to identify the concepts used to develop models that generate an image from text, more specifically analyzing the Stable Diffusion Model.
-Using the model available at the following address https://yeri.ai/pt/app/image-generator. It can be observed that it can generate images from text, as shown in Figure 3. However, it presents some errors in its execution, as identified in Figures 1 and 4.
+Based on the papers by Rombach et al., 2021, and Ho et al., 2020, this study sought to identify the concepts used to develop models that generate an image from text, more specifically analyzing the Stable Diffusion Model. Using the model available at the following address https://yeri.ai/pt/app/image-generator. It can be observed that it can generate images from text, as shown in Figure 3 - Green Dog in the Table. However, it presents some errors in its execution, as identified in Figures 1 - Pink Chalkboard, 2 - Purple Orange and 4 - A Frog inside the car.
 
-The first problem, shown in Figure 1, demonstrates that the model failed to correctly apply the color attribute, pink, to the object, classroom blackboard. The second problem, shown in Figure 4, demonstrates that after identifying two objects, car and frog, the model failed to place them in a single figure as per the text "Frog inside the car".
+The first problem, shown in Figure 1, demonstrates that the model failed to correctly apply the color attribute, pink, to object, classroom blackboard. The second problem, shown in Figure 4, demonstrates that after identifying two objects, car and frog, the model failed to place them in a single figure as per the text "Frog inside the car".
 
 
 | Green Dog on the Table    | A Frog inside the car    |
@@ -265,17 +264,17 @@ The first problem, shown in Figure 1, demonstrates that the model failed to corr
 | ![Generated image and metadata for the blue banana prompt](imagens/Imagem_CachorroVerde.png) | ![Generated image and metadata for the blue banana prompt](imagens/Imagem_SapodentroCarro.png) |
 
 
-The idea was to study the functioning of the Stable Diffusion model in the first problem, figure 1, which is to correctly use the color attribute in the object according to the prompt instructions, which is "pink classroom chalkboard". Based on the paper by Rombach et al., 2021, it was possible to identify the diagram in Figure 6 and based on the results of experiments 1 to 4, it was possible to identify the possibility of solving the problem presented in Figure 1 using the CVAE and CNN-CVAE model.
+The idea was to study the functioning of the Stable Diffusion model in the first problem, figure 1, which is to correctly use the color attribute in the object according to the prompt instructions, which is "pink classroom chalkboard". Based on the paper by Rombach et al., 2021, it was possible to identify the diagram in Figure 5 - Stable Diffusion Architecture and based on the results of experiments 1 to 4, it was possible to identify the possibility of solving the problem presented in Figure 1 using CNN-CVAE model.
 
  ![Generated image and metadata for the blue banana prompt](imagens/Imagem_StableDiffusion.png)
 
-In experiment 1 - Dataset Analysis, the Conceptual Captions database was analyzed using a sample of 1000 valid records out of 200,000 records read. From these valid records, figure 6, which presents the heat map of the pattern, and figure 7, which presents the heat map of the PPMI, were generated. In figure 6, it can be observed that the object "blackboard" is frequently associated with the colors black, white, and green, but not with color pink. In figure 7, it can be observed that semantically the object "blackboard" is frequently associated with the colors black, white, and green, but not with color pink.
+In experiment 1 - Dataset Analysis, the Conceptual Captions database was analyzed using a sample of 1000 valid records out of 200,000 records read. From these valid records, figure 6 - Heat map of the pattern, and figure 7 - Heat map of the PPMI, were generated. In figure 6, it can be observed that the object "blackboard" is frequently associated with the colors black, white, and green, but not with color pink. In figure 7, it can be observed that semantically the object "blackboard" is frequently associated with the colors black, white, and green, but not with color pink.
 
 | Heat map of the pattern    | PPMI heat map    |
 | ------------- | ----------------- |
 | ![Generated image and metadata for the blue banana prompt](imagens/Imagem_MapaCalor.png) | ![Generated image and metadata for the blue banana prompt](imagens/Imagem_MapaCalorSemantica.png) |
 
-In experiment 2 - Embeddings CLIP, it can be noted that the green chalkboard pattern, figure 8, which is not the prompt request, is the beginning of the model's denoising procedure. Figure 9 shows that the green frog pattern, which is the prompt request, is the beginning of the model's denoising procedure.
+In experiment 2 - Embeddings CLIP, it can be noted that figure 8 - Denoising procedure chalkboard , the green chalkboard pattern which is not the prompt request, is the beginning of the model's denoising procedure. Figure 9 - Denoising procedure Frog shows that the green frog pattern, which is the prompt request, is the beginning of the model's denoising procedure.
 
 
 | Denoising procedure chalkboard    | Denoising procedure Frog    |
@@ -285,7 +284,7 @@ In experiment 2 - Embeddings CLIP, it can be noted that the green chalkboard pat
 
 This result shows that the model retrieves the image stored in the training phase and that, possibly, in the future Cross Attention phase it would try to assign a color to the object if the text in the image were different from that requested in the prompt.
 
-In experiment 3 - Cross Attention, it can be noted that when the model starts the process by presenting an image that does not match the prompt request, it is unable to correctly assign the color to the object, as can be seen in figures 10 and 11.
+In experiment 3 - Cross Attention, it can be noted that when the model starts the process by presenting an image that does not match the prompt request, it is unable to correctly assign the color to the object, as can be seen in Figure 10 - Banana and Figure 11 – Polar Bear.
 
 
 ![Generated image and metadata for the blue banana prompt](imagens/Imagem_CrossAttentionBanana.png)
@@ -294,29 +293,30 @@ In experiment 3 - Cross Attention, it can be noted that when the model starts th
 
 Therefore, noting that the training data, experiment 1 - Dataset Analysis, does not present the necessary data to satisfy the request of the prompt, and that in the observed steps of experiment 2 - Embeddings do CLIP, and in experiment 3 - Cross Attention, the current Stable Diffusion model presented at https://yeri.ai/pt/app/image-generator is unable to meet the request made in the prompt.
 
-Observing Figure 5, the structure of the Stable Diffusion model, one solution that can be proposed is to try to solve the database problem from the beginning of the model training. The idea is to generate statistically relevant databases in order to obtain a response, for training model, that answers the prompt request. Considering the size of the database and the number of parameters of the Stable Diffusion model, it was identified that it is more viable to work with a smaller database, a sample of the Conceptual Captions database, as well as to work with a simpler model, such as the CVAE and CNN-CVAE algorithms, to generate the image correctly, as requested in the prompt. The CVAE algorithm is described below, and the code will be available in the notebook named CVAE.
+Observing Figure 5 - Stable Diffusion Architecture, One solution that can be proposed is to try to solve the problem through fine-tuning. The idea is to generate statistically relevant databases in such a way as to obtain an assertive response, immediately after training, that answers the prompt request.
+
+Considering the size of the database and the number of parameters in the Stable Diffusion Model, computational tests were performed to identify the feasibility of working with the free version of Google Colab. The idea was to study the possibility of using a smaller database, a sample of the Conceptual Captions database, as well as using a simpler model, CNN-CVAE, capable of generating the image requested in the prompt.
+
+Furthermore, computational tests were performed on the Laion-400M database used in the Stable Diffusion model. It was found that simple object segmentation, such as for example, a frog, a school blackboard, etc., would not be possible using the free Google Colab tool. Therefore, the paid Colab Pro license was acquired, and work on the project began using the Laion-400M database and the Stable Diffusion 1.5 model.
 
 
-Algorithm 1: CVAE - Conditional Image Generation 
+Algorithm 1: CNN-CVAE – Conditional Image Generation
 
-Input: Training set T = {(xℓ, cℓ) : ℓ = 1, ..., L},
+Input: Training set T={(x_l,c_l):l=1,…,L}
+Where x_l= RGB training image (3ⓜ×64ⓜ×64) and c_l= conditional prompt (object + color), 
+Latent dimension z, trained CNN-CVAE model θ, and input prompt c.
 
-where:
-    xℓ = training image
-    cℓ = conditional prompt (object + color)
-
-    Latent dimension z, trained CVAE model θ, and input prompt c.
-
-Output: Generated image x̂.
-
-1. Load the trained CVAE parameters θ;
-2. Encode the conditional prompt cinto a condition vector ec;
-3. Sample a latent vectorz ~ N(0, I);
-4. Concatenate latent vector and condition:h = [z, ec];
-5. Pass h through the decoder network: x̂ = Decoderθ(h);
-6. Apply sigmoid normalization to produce pixel intensities in the interval [0,1];
-7. Reshape x̂ into RGB image format (3 × 64 × 64);
-8. Return generated image x̂.
+Output: Generated image x ̂.
+	1.  Load the trained CNN-CVAE parameters θ, 
+	2.  Encode the conditional prompt cinto a condition embedding vector e_c,
+	3.  Sample a latent vector z∼N(0,I), 
+	4.  Concatenate the latent vector and conditional embedding h=[z,e_c ], 
+	5.  Project hinto an initial latent feature map through a fully connected layer, 
+	6.  Pass the feature map through the convolutional decoder network: x ̂=Decoder_θ (h), 
+	7.  Apply successive transposed convolution layers to progressively increase spatial resolution, 
+	8.  Apply sigmoid activation to obtain pixel intensities in the interval [0ⓜ,1], 
+	9.  Reshape the output into RGB image format 3×64×64, 
+	10. Return generated image x ̂.
 
 Another solution would be to study and propose a change to the Cross Attention algorithm so that it can generate the image taking into account the prompt request in the intermediate layers of the UNet.
 
@@ -394,14 +394,26 @@ Overall, the project shows that attribute binding is a systemic challenge in tex
 
 ### Bibliographic references
 
-Sharma, P et al (2018). Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset For Automatic Image Captioning. Url: https://aclanthology.org/P18-1238.pdf 
-
-Schuhmann, C et al (2021): LAION-400M: Open Dataset of CLIP-Filtered 400 Million Image-Text Pairs. Url: https://arxiv.org/abs/2111.02114
-
-Schuhmann, C et al (2022): LAION-5B: An open large-scale dataset for training next generation image-text. Url: https://arxiv.org/abs/2210.08402
-
 Rombach, R. et al. (2021). “High-Resolution Image Synthesis with Latent Diffusion Models”. Em: CoRR abs/2112.10752. url: https://arxiv.org/abs/2112.10752 (ver p. 20).
 
 Ho, J., A. Jain e P. Abbeel (2020). “Denoising Diffusion Probabilistic Models”. Em: CoRR abs/2006.11239. url: https://arxiv.org/abs/2006.11239 (ver p. 20).
 
+Sharma, P. et al (2018). Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset For Automatic Image Captioning. Url: https://aclanthology.org/P18-1238.pdf 
+
+Schuhmann, C. et al (2021): LAION-400M: Open Dataset of CLIP-Filtered 400 Million Image-Text Pairs. Url: https://arxiv.org/abs/2111.02114
+
+Schuhmann, C. et al (2022): LAION-5B: An open large-scale dataset for training next generation image-text. Url: https://arxiv.org/abs/2210.08402
+
 Nichol, A. et al. (2021). “GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models”. Em: CoRR abs/2112.10741. url: https://arxiv.org/abs/2112.10741 (ver p. 20).
+
+Chefer, H. et al. (2023). “Attend-and-Excite: Attention-Based Semantic Guidance for Text-to-Image Diffusion Models”. url: https://doi.org/10.48550/arXiv.2301.13826 
+
+Trusca, M. M. et al. (2024). “Object-Attribute Binding in Text-to-Image Generation: Evaluation and Control”. url: https://doi.org/10.48550/arXiv.2404.13766
+
+Key Concepts from CS140. It’s a lecture at Brandeis University on IAA covered the quantitative methods required to standardize human interpretation and minimize subjective judgment. Lecture slides url: Brandeis University CS140 Slide Deck
+
+Narayanan, A. et al. (2025). “Bias in the Picture: Benchmarking VLMs with Social-Cue News Images and LLM-as-Judge Assessment”. url: https://doi.org/10.48550/arXiv.2509.19659 
+
+Hayes, K. D. et al. (2025). “FineGRAIN: Evaluating Failure Modes of Text-to-Image Models with Vision Language Model Judges”. url: https://doi.org/10.48550/arXiv.2512.02161
+
+Keith, B. et al. (2025). “VLM-as-a-Judge Approaches for Evaluating Visual Narrative Coherence in Historical Photographical Records”. url: https://doi.org/10.3390/electronics14214199 
