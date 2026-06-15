@@ -1,6 +1,3 @@
-# `Geração de Imagens com IA: Desafios no Controle de Atributos`
-
-
 # `AI Image Generation: Challenges in Attribute Control`
 
 ## Presentation
@@ -365,8 +362,33 @@ The following schedule is proposed for each stage of the project:
 By analyzing the results from our experiments, we concluded that the problem of attribute binding on diffusion models, in this case Stable Diffusion, comes from different components of the architecture instead of having just one responsible. The way the training dataset was generated, the problem of embedding representation on CLIP and the cross-attention mechanism failing to pay attention on certain attributes combined makes this an intrinsic problem of this architecture.
 
 
+### Fine-tuning Dataset, Results and Discussion
 
+After the previous experiments, the project moved from diagnostic analysis to model adaptation. The dataset analysis, CLIP embedding tests, and cross-attention inspection suggested that Stable Diffusion has more difficulty binding uncommon color attributes to the correct object region when the requested pair conflicts with common visual priors. Based on this evidence, a specific fine-tuning dataset was created to reinforce rare object-color associations while also preserving examples that the original model already handled correctly.
 
+The fine-tuning dataset was composed of 271 images, including 200 treated images and 71 control images. The treated set contained rare or difficult object-color combinations, while the control set contained combinations used to monitor whether fine-tuning would degrade previously stable behavior. Before training, the images were recaptioned with Qwen2.5-7B-Instruct, generating three captions per image. This process produced 813 image-caption rows, with one invalid caption rejected.
+
+![Recaptioning summary](imagens/exp5_recaption_summary.png)
+
+The LoRA fine-tuning was conducted using Stable Diffusion 1.5 for 10 epochs, with rank 16, batch size 4, gradient accumulation of 2, learning rate of 1e-4, and validation every 100 steps. During training, validation previews were generated to qualitatively observe how the model was applying the requested color attributes to different objects.
+
+![LoRA validation samples during training - preview 1](imagens/exp6_lora_validation_samples_1.png)
+
+![LoRA validation samples during training - preview 2](imagens/exp6_lora_validation_samples_2.png)
+
+![LoRA validation samples during training - preview 3](imagens/exp6_lora_validation_samples_3.png)
+
+The model was evaluated with a VLM-based judge, Qwen2.5-VL-7B-Instruct, over 3600 generated images. The main metric was `binding_correct`, which indicates whether the generated image correctly associates the requested color with the target object. The comparison also considered global accuracy, group-level accuracy, baseline-to-LoRA delta, and the relationship between performance and NPMI, used as an indicator of how common or rare each object-color association is.
+
+Overall, the fine-tuned model improved global binding accuracy from 71.2% to 77.4%, an increase of +6.2 percentage points. The strongest gains appeared in the rare combinations. Treated pairs improved from 20.4% to 53.7%, while held-out pairs improved from 23.3% to 55.6%. This is an important result because held-out pairs were not directly included in the fine-tuning data, suggesting that the model learned some degree of generalization rather than only memorizing the training examples.
+
+![Quantitative evaluation summary](imagens/exp7_compare_metrics.png)
+
+However, the control group decreased from 96.3% to 84.2%. This indicates that the fine-tuning also introduced some regression in combinations that the baseline model already handled well. Therefore, the results show a trade-off: LoRA improved difficult and rare attribute-object pairs, but partially reduced performance on easier and more stable cases.
+
+The NPMI analysis also supports this interpretation. Before fine-tuning, accuracy had a stronger positive correlation with NPMI, suggesting that the baseline model performed better on statistically common associations. After LoRA fine-tuning, this correlation became weaker, indicating that the model became less dependent on prior object-color associations from the training distribution.
+
+Qualitatively, the validation images show visible improvements in some rare prompts, such as blue banana and orange polar bear. Still, some generated images continue to show partial color application or confusion between the object and the background. Thus, the fine-tuning improved attribute binding, especially for rare combinations, but did not completely solve the problem. Future work should focus on reducing regression in control pairs and improving the stability of color-object binding across different prompts.
 
 ### Bibliographic references
 
