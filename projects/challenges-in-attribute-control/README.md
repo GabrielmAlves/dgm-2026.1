@@ -306,6 +306,7 @@ Algorithm 1: CNN-CVAE – Conditional Image Generation
 Input: Training set T={(x_l,c_l):l=1,…,L}
 
    Where x_l= RGB training image (3ⓜ×64ⓜ×64) and c_l= conditional prompt (object + color), 
+   
    Latent dimension z, trained CNN-CVAE model θ, and input prompt c.
 
 Output: Generated image x ̂.
